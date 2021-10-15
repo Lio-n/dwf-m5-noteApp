@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  height: 60px;
+  background: #ff8282;
+}
+.root {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 48px 0 16px 0;
+  font-size: 52px;
+}
+.form {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.form__subtitle {
+  display: block;
+  margin-bottom: 5px;
+}
+.form__input {
+  padding: 5px;
+  width: 100%;
+  border: 2px solid #000;
+  margin-bottom: 1rem;
+  vertical-align: bottom;
+  font-size: 18px;
+}
+@media (min-width: 960px) {
+  .form__input {
+    margin: 0;
+    max-width: 60%;
+  }
+}
+.form__button {
+  width: 100%;
+  background: #9cbbe9;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+}
+@media (min-width: 960px) {
+  .form__button {
+    width: 36%;
+    margin: 0 0 0 2rem;
+  }
+}
+.form__button,
+.form__input {
+  height: 55px;
+  border-radius: 4px;
+  font-family: Roboto;
+}
+.lista {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 960px) {
+  .lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry; /* this will do the magic */
+    grid-gap: 10px;
+  }
+}
+.lista:focus {
+  border: solid 2px;
+}
